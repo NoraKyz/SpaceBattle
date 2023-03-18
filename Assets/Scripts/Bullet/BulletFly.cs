@@ -1,21 +1,11 @@
+using System;
+using OtherScripts;
 using UnityEngine;
 
 namespace Bullet
 {
-    public class BulletFly : MonoBehaviour
+    public class BulletFly : ParentFly
     {
-        [SerializeField] protected float speed;
-
-        protected Rigidbody2D rb;
-
-        private void Awake()
-        {
-            rb = GetComponentInParent<Rigidbody2D>();
-        }
-
-        private void Start()
-        {
-            rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
-        }
+        
     }
 }

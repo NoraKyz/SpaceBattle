@@ -15,6 +15,11 @@ public class CusMonoBehaviour : MonoBehaviour
         LoadComponents();
     }
 
+    protected virtual void Start()
+    {
+        
+    }
+
     protected virtual void LoadComponents()
     {
         // For override

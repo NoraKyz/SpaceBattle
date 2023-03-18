@@ -31,7 +31,9 @@ public class ShipShooting : MonoBehaviour
 
         Transform cacheTranform = transform;
         Quaternion rotation = cacheTranform.parent.rotation;
-        Transform newBullet = BulletSpawner.Instance.Spawn(cacheTranform.position, rotation);
+        Transform newBullet = BulletSpawner.Instance.Spawn(BulletSpawner.FireballBlueBig, cacheTranform.position, rotation);
+        if (newBullet == null) return;
+        
         newBullet.gameObject.SetActive(true);
     }
 
